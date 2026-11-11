@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: rgb(101, 28, 36);
+  --color-brand-secondary: rgb(101, 28, 36);
+  --color-brand-dark: #050505;
+  --color-neutral-background: #FFFFFF;
+  --color-neutral-surface: #F5F5F5;
+  --color-neutral-border: rgba(0, 0, 0, 0.08);
+  --color-text-primary: #050505;
+  --color-text-secondary: #4A4A4A;
+
+  --font-primary: 'Josefin Sans', sans-serif;
+  --font-secondary: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.mask-fade-edges {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 12.5%,
+    rgb(0, 0, 0) 87.5%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 12.5%,
+    rgb(0, 0, 0) 87.5%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.bg-isometric-grid {
+  background-image:
+    linear-gradient(30deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 12px 20px;
+}
